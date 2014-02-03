@@ -1,14 +1,14 @@
 ## OOP in JavaScript
 
-Quick example:
+Quick example of the factory method.
 
 ```javascript
 Car = {
   createNew: function() {
     var car = {};
     car.drive = function(){ alert("driving!"); }
-    return animal;
-  };
+    return car;
+  }
 };
   
 Sedan = {
@@ -19,9 +19,10 @@ Sedan = {
         alert( wheels );
     };
     return sedan;
-    };
+    }
 };
   
 var sedan = Sedan.createNew();
-sedan.makeSound();
-sedan.eat();
+sedan.numWheels();
+sedan.drive();
+```
